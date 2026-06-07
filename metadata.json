@@ -1,0 +1,6 @@
+{
+  "name": "今日试墨",
+  "description": "一隅留白，一日试墨。结合东方美学与情绪表达的每日墨候和试墨体验。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
