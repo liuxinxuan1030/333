@@ -79,12 +79,32 @@ export default function App() {
   return (
     <main className="relative min-h-screen w-full flex flex-col justify-between items-center paper-bg-pattern px-4 py-6 md:py-10 text-neutral-800 font-sans selection:bg-neutral-200 select-none overflow-hidden">
       
-      {/* Decorative Red Cinnabar Seal - Header logo */}
-      <div className="absolute top-4 left-4 flex items-center gap-1.5 opacity-90">
-        <div className="flex items-center justify-center w-6 h-6 border-2 border-red-700/80 rounded-sm font-serif text-[9px] font-bold text-red-600/90 leading-none -rotate-3 p-0.5 select-none">
-          今日
-        </div>
-        <span className="font-serif tracking-[0.2em] text-xs text-neutral-400 font-light hidden sm:inline">今日试墨</span>
+      {/* Left side text header with custom vector brand logo */}
+      <div className="absolute top-4 left-4 flex items-center gap-2.5 opacity-90 select-none">
+        <svg className="w-5.5 h-5.5 text-neutral-900" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+          {/* Top Outer Hook Frame */}
+          <path d="M 40 37 H 26 C 23.5 37 22.5 36 22.5 33.5 V 19 C 22.5 16.5 23.5 15.5 26.5 15.5 H 73.5 C 76.5 15.5 77.5 16.5 77.5 19 V 33.5 C 77.5 36 76.5 37 74 37 H 60" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+          
+          {/* Upper central floating pill */}
+          <path d="M 41 25.5 H 59" strokeWidth="5.5" strokeLinecap="round" />
+          
+          {/* Central Gold/Mustard Calligraphy Brush */}
+          <rect x="47.6" y="31.5" width="4.8" height="29" rx="1.5" fill="#bc9501" stroke="none" />
+          <path d="M 47.6 60 L 50 73 L 52.4 60 Z" fill="#bc9501" stroke="none" />
+          
+          {/* Left and Right pill pairs */}
+          <path d="M 22.5 49 H 41" strokeWidth="5.5" strokeLinecap="round" />
+          <path d="M 22.5 60.5 H 41" strokeWidth="5.5" strokeLinecap="round" />
+          
+          <path d="M 59 49 H 77.5" strokeWidth="5.5" strokeLinecap="round" />
+          <path d="M 59 60.5 H 77.5" strokeWidth="5.5" strokeLinecap="round" />
+          
+          {/* Bottom character horizontal support and double logs */}
+          <path d="M 22.5 74.5 H 77.5" strokeWidth="5.5" strokeLinecap="round" />
+          <path d="M 50 74.5 V 86" strokeWidth="5.5" />
+          <path d="M 22.5 86.5 H 77.5" strokeWidth="5.5" strokeLinecap="round" />
+        </svg>
+        <span className="font-serif tracking-[0.25em] text-xs text-neutral-800 font-medium pb-0.5">今日试墨</span>
       </div>
 
       {/* Volume Sound controller & Zen Status Indicator top right */}
@@ -114,10 +134,30 @@ export default function App() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center justify-center text-center space-y-12 py-8"
             >
-              {/* Spiritual calligraphy frame */}
-              <div className="relative p-8 w-28 h-28 border border-neutral-200/50 rounded-full flex items-center justify-center bg-white/20 shadow-inner">
+              {/* Spiritual calligraphy frame with Chinese 毛笔尖 (pointed brush) */}
+              <div className="relative p-7 w-28 h-28 border border-neutral-200/50 rounded-full flex items-center justify-center bg-white/20 shadow-inner">
                 <div className="absolute inset-2 border border-dashed border-neutral-300/45 rounded-full" />
-                <PenTool className="w-8 h-8 text-neutral-800 font-light" strokeWidth={1} />
+                <svg className="w-20 h-20 text-neutral-800 transition-all duration-300 hover:scale-110 active:scale-95" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Top Hanging Loop (Slender Oval) */}
+                  <path d="M 66 18 C 69 13, 73 6, 76.5 11 C 79 14.5, 74.5 19, 71.5 22.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  
+                  {/* Top cap */}
+                  <path d="M 64.5 19 L 72.5 22.5 C 73.5 21, 74.5 19.5, 73.5 18 C 72.5 16.5, 68.5 14.5, 66 16.5 Z" fill="#fbfaf7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  
+                  {/* Long Shaft / Handle (filled with white to prevent line showing) */}
+                  <path d="M 65 21 L 68.5 22.5 L 47.5 69.5 L 44 68 Z" fill="#fbfaf7" />
+                  <path d="M 65 21 L 44 68 M 68.5 22.5 L 47.5 69.5" stroke="currentColor" strokeWidth="1.8" />
+                  
+                  {/* Bottom ferrule / collar */}
+                  <path d="M 44 68 L 41.5 76 L 49.5 78.5 L 47.5 69.5 Z" fill="#fbfaf7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  
+                  {/* Pointed Calligraphy hair tip */}
+                  <path d="M 41.5 76 C 36 82, 34 89, 30.5 107 C 35.5 101, 46 95, 49.5 78.5 Z" fill="#fbfaf7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  
+                  {/* Internal hair textures from the drawing */}
+                  <path d="M 39 81 C 36 86, 35.5 93, 33 100" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                  <path d="M 43.5 82 C 40 88, 38.5 94, 35.5 102" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
               </div>
 
               <div className="space-y-4">
@@ -149,7 +189,7 @@ export default function App() {
                       onClick={() => triggerNewInkFlow(false)}
                       className="w-full py-3 px-6 bg-transparent hover:bg-neutral-100 text-neutral-600 border border-neutral-200/60 rounded-xl font-serif tracking-widest text-xs transition-all duration-200"
                     >
-                      再拂素笺，再拂一笔 (随机体验)
+                      再拂素笺，重书一笔（随机体验）
                     </button>
                   </div>
                 ) : (
@@ -320,7 +360,7 @@ export default function App() {
 
       {/* Footer minimal info */}
       <footer className="w-full text-center py-2 text-[10px] font-mono text-neutral-400 mt-6 select-none pointer-events-none relative z-10">
-        <p className="tracking-wide">© 《今日试墨》一隅留白 • 轻量日常疗愈</p>
+        <p className="tracking-wide">© 《今日试墨》一隅留白</p>
       </footer>
 
       {/* Share / Download Poster Modals */}

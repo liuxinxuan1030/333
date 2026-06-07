@@ -94,8 +94,9 @@ export function generateDailyInkResult(dateObj: Date): InkResult {
   const day = dateObj.getDate();
   const dateStr = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
   
-  // Numerical seed representing the day
-  const seedNum = year * 10000 + month * 100 + day;
+  // High-entropy dynamic seed combining current exact timestamp and random integer offset
+  // to ensure a completely unique and customized outcome on every single click.
+  const seedNum = Date.now() + Math.floor(Math.random() * 1000000);
   const rand = getSeededRandom(seedNum);
   
   // 1. Pick Ink Fortune
